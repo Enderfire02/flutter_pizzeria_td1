@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pizzeria_td1/menu.dart';
+import 'package:flutter_pizzeria_td1/Models/menu.dart';
 
 void main() {
   runApp(const MyApp());
