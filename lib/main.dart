@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pizzeria_td1/Models/menu.dart';
+import 'package:flutter_pizzeria_td1/ui/pizza_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,7 +40,19 @@ class MyHomePage extends StatelessWidget {
       body: Center(
         child: ListView.builder(
           itemCount: _menus.length,
-          itemBuilder: (context, index) => _buildRow(_menus[index]),
+          itemBuilder: (context, index) => InkWell(
+            onTap: () {
+              switch (_menus[index].type) {
+                case 2: //pizza
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PizzaList()),
+                  );
+                  break;
+              }
+            },
+            child: _buildRow(_menus[index]),
+          ),
           itemExtent: 180,
         ),
       ),
