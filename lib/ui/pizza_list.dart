@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pizzeria_td1/Models/pizza_data.dart';
 import 'package:flutter_pizzeria_td1/ui/pizza_details.dart';
+import 'package:flutter_pizzeria_td1/ui/share/buy_button_widget.dart';
 
 import '../Models/pizza.dart';
 
@@ -58,9 +59,9 @@ _buildRow(BuildContext context, pizza){
               },
             child: _buildPizzaDetails(context, pizza),
           ),
-        _buildBuyButton()
+        BuyButtonWidget(),
         ],
-      )
+      ),
   );
 }
 

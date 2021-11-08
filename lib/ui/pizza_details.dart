@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pizzeria_td1/Models/pizza.dart';
+import 'package:flutter_pizzeria_td1/ui/share/buy_button_widget.dart';
 
 class PizzaDetails extends StatefulWidget {
   final Pizza _pizza;
@@ -44,7 +45,7 @@ class _PizzaDetailsState extends State<PizzaDetails> {
           Text('Sauce sélectionnées'),
           Text('Les sauces'),
           Text('${widget._pizza.price} €'),
-          _buildBuyButton(),
+          BuyButtonWidget(),
         ],
       ),
     );
