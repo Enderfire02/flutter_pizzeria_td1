@@ -6,6 +6,5 @@ class Menu {
   String image;
   Color color;
 
-  Menu (this.type, this.title, this.image, this.color);
+  Menu(this.type,this.title,this.image,this.color);
 }
-

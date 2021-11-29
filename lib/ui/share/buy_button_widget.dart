@@ -1,32 +1,36 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_pizzeria_td1/Models/cart.dart';
+import 'package:flutter_pizzeria_td1/Models/pizza.dart';
+
 
 class BuyButtonWidget extends StatelessWidget {
-  const BuyButtonWidget({Key? key}) : super(key: key);
-
+  final Pizza _pizza;
+  final Cart _cart;
+  const BuyButtonWidget(this._pizza, this._cart, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        ElevatedButton(
-          style: ButtonStyle(
-            backgroundColor:
-              MaterialStateProperty.all<Color>(Colors.red.shade800)),
-        child: Row(
-          children: [
-            Icon(Icons.shopping_cart),
-            SizedBox(width: 5),
-            Text("Commander"),
-          ],
-        ),
-          onPressed: (){
-            print('Commander une pizza');
-          },
-        )
-      ],
-    );
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          ElevatedButton(
+            style: ButtonStyle(
+                backgroundColor:
+                MaterialStateProperty.all<Color>(Colors.red.shade800)),
+            child: Row(
+              children: [
+                Icon(Icons.shopping_cart),
+                SizedBox(width: 5),
+                Text("Commander"),
+              ],
+            ),
+            onPressed: () {
+              print('Commander une pizza');
+              _cart.addProduct(_pizza);
+            },
+          ),
+        ],
+      );
   }
-
 }

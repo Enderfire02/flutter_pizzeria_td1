@@ -1,13 +1,14 @@
-import 'package:flutter_pizzeria_td1/Models/pizza.dart';
+import 'pizza.dart';
 
-class PizzaData {
-
-  static List<Pizza> buildlist() {
-    List<Pizza> list = [];
-    list.add(Pizza(1, 'Barbecue', 'La garniture', 'pizza-bbq.jpg', 8));
-    list.add(Pizza(2, 'Hawai', 'La garniture', 'pizza-hawai.jpg', 9));
-    list.add(Pizza(3, 'Epinards', 'La garniture', 'pizza-spinach.jpg', 7));
-    list.add(Pizza(4, 'Végétarienne', 'La garniture', 'pizza-vegetable.jpg', 10));
-    return list;
-  }
+class PizzaData
+{
+ static List<Pizza> buildList()
+ {
+   List<Pizza> list = [];
+   list.add(Pizza(1,'Fromages', 'Pâte à pizza, sauce tomate en base, jambon et trois fromages.', 'pizza-bbq.jpg', 13));
+   list.add(Pizza(2,'Champignons', 'Pâte à pizza, sauce tomate,  jambon et champignons.', 'pizza-hawai.jpg', 14));
+   list.add(Pizza(3,'Bizarre', 'Dépend de l humeur du chef.', 'pizza-spinach.jpg', 7));
+   list.add(Pizza(4,'Végétarienne', 'Pâte à pizza, sauce tomate, roquette et champignons.', 'pizza-vegetable.jpg', 9));
+   return list;
+ }
 }
